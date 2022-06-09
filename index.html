@@ -2,7 +2,8 @@
 <html lang="zh-TW">
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type">
     <title>Unity WebGL Player | 2DTestProject</title>
     <script src="Build/UnityLoader.js"></script>
     <script>
@@ -14,12 +15,12 @@
 	
   </head>
   <body>
-  <!-- 直時候顯示提示 -->
+  <!-- 直時候顯示提示 100vw 100vh -->
 
 	<div id="orientationchangeDvi" style="display: ;  width: 99vw; height: 95vh; margin: auto;  background : rgba(0,0,0,0.2);">
         <div style= " display: flex;justify-content: center; align-items: center; ">請轉向手機</div>
     </div>
-      <div id="unityContainer" style="display:;position: absolute;   width: 100vw; height: 100vh; margin: auto; "></div>
+      <div id="unityContainer" style="display:;position: absolute;   width: 100%; height: 100%; margin: auto; "></div>
 	  	  <script>
 		  
 		
@@ -29,8 +30,8 @@
       if (window.orientation == 90 || window.orientation == -90) {
         // 横狀
 		document.getElementById("unityContainer").style.display="";//顯示
-		document.getElementById("unityContainer").style.width= "100vw";//顯示
-		document.getElementById("unityContainer").style.height= "100vh";//顯示
+		document.getElementById("unityContainer").style.width= "100%";//顯示
+		document.getElementById("unityContainer").style.height= "100%";//顯示
 		document.getElementById("orientationchangeDvi").style.display="none";//隱藏
       } else if(window.orientation==180||window.orientation==0){
         // 直
@@ -38,8 +39,8 @@
 			document.getElementById("orientationchangeDvi").style.display="";//顯示
       }else{
 	  		document.getElementById("orientationchangeDvi").style.display="none";//隱藏
-		document.getElementById("unityContainer").style.width= "100vw";//顯示
-		document.getElementById("unityContainer").style.height= "100vh";//顯示
+		document.getElementById("unityContainer").style.width= "100%";//顯示
+		document.getElementById("unityContainer").style.height= "100%";//顯示
 	  }
     }
   </script>
